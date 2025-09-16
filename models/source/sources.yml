@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: source # this is the source_name
-    database: dbt_tutorial
+    database: '{{ target.catalog }}' # this uses the catalog from profiles.yml
     schema: source
     tables:
       - name: fact_sales # this is the table_name
